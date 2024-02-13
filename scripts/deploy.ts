@@ -6,7 +6,7 @@ async function main() {
   await todoContract.waitForDeployment();
 
   console.log(
-    `SetterGetter contract has been deployed to ${todoContract.target}`
+    `Todo contract has been deployed to ${todoContract.target}`
   );
 }
 
