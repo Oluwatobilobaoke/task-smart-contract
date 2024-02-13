@@ -11,7 +11,7 @@ contract Todo {
     bool isCompleted;
   }
 
-  TodoItem[] public todoItems;
+  TodoItem[] todoItems;
 
   constructor() {
     todoOwner = msg.sender;
