@@ -16,3 +16,17 @@ One function should toggle the isDone status.
 Users should be able to update title, description, isdone status and delete todo.
 Finally, write and test with remix and hardhat."
 This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+
+## Install
+
+```bash
+npx hardhat run scripts/deploy.ts --network sepolia
+```
+
+```bash
+npx hardhat verify --network sepolia <contract-address>
+```
+
+```bash
+npx hardhat test
+```
