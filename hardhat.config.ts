@@ -28,7 +28,7 @@ const config: HardhatUserConfig = {
 export default config;
 
 // npx hardhat run scripts/deploy.ts --network sepolia
-//  npx hardhat verify --network sepolia 0x310376a36649cC8897795000283442Cb05C58dE7
-// https://sepolia.etherscan.io/address/0x310376a36649cC8897795000283442Cb05C58dE7#code
+//  npx hardhat verify --network sepolia 0x6a785339AF6c3311422198C3666E8eFe32B858E4
+// https://sepolia.etherscan.io/address/0x6a785339AF6c3311422198C3666E8eFe32B858E4#code
 
 // npx hardhat test --network sepolia

@@ -8,7 +8,7 @@ contract Todo {
   struct TodoItem {
     string title;
     string description;
-    bool isCompleted;
+    bool isDone;
   }
 
   TodoItem[] todoItems;
@@ -26,9 +26,9 @@ contract Todo {
     todoItems.push(TodoItem(_title, _description, false));
   }
 
-  function getTodoItem(uint index) todoItemExists(index) external view returns (string memory title, string memory description, bool isCompleted){
+  function getTodoItem(uint index) todoItemExists(index) external view returns (string memory title, string memory description, bool isDone){
     TodoItem storage todoItem = todoItems[index];
-    return (todoItem.title, todoItem.description, todoItem.isCompleted);
+    return (todoItem.title, todoItem.description, todoItem.isDone);
   }
 
   function updateTitle(uint index, string calldata _title) todoItemExists(index) external onlyOwner {
@@ -43,7 +43,7 @@ contract Todo {
 
   function updateTodoItemStatus(uint index) todoItemExists(index) external  onlyOwner {
     TodoItem storage todoItem = todoItems[index];
-    todoItem.isCompleted = !todoItem.isCompleted;
+    todoItem.isDone = !todoItem.isDone;
   }
 
   function getTodoItems() external view onlyOwner returns(TodoItem[] memory) {
